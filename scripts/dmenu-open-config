@@ -1,0 +1,34 @@
+#!/bin/bash
+
+EDITOR="/usr/bin/nvim"
+
+declare -a options=(
+  "xinitrc $HOME/Configs/X11/xinitrc"
+  "dwm $HOME/Configs/suckless/dwm/config.def.h"
+  "hyprland $HOME/Configs/hypr/hyprland.conf"
+  "dmenu $HOME/Configs/suckless/dmenu/config.def.h"
+  "slstatus $HOME/Configs/suckless/slstatus/config.def.h"
+  "picom $HOME/Configs/picom/picom.conf"
+  "compfy $HOME/Configs/compfy/compfy.conf"
+  "sxhkd $HOME/Configs/sxhkd/sxhkdrc"
+  "dunst $HOME/Configs/dunst/dunstrc"
+  "fish $HOME/Configs/fish/config.fish"
+  "st $HOME/Configs/suckless/st/config.def.h"
+  "kitty $HOME/Configs/kitty/kitty.conf"
+  "neovim $HOME/Configs/nvim/init.lua"
+  "bashrc $HOME/Configs/.bashrc"
+  "aliases $HOME/Configs/.aliasrc"
+  "profile $HOME/Configs/.profile"
+  "quit"
+)
+
+choice=$(printf "%s\n" "${options[@]}" | dmenu -l 20 -p "EditConfigs")
+
+[ "$choice" = "quit" ] && echo "Program terminated." && exit 0
+
+if [ -n "$choice" ]; then
+  cfg=$(printf "%s\n" "${choice}" | cut -d ' ' -f 2)
+  $EDITOR $cfg
+else
+  echo "Program terminated." && exit 1
+fi

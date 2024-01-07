@@ -1,0 +1,10 @@
+#!/bin/sh
+
+printf "1. Xorg, 2. Wayland\n"
+read choice
+
+case $choice in
+  1) startx 2> $HOME/Logs/startx.log ;;
+  2) exec Hyprland ;;
+  *) exit ;;
+esac

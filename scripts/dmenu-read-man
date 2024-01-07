@@ -1,0 +1,3 @@
+#!/bin/sh
+
+man -k . | cut -d " " -f 1 | dmenu -p "Choose the manual page to read" -l 20 | xargs man

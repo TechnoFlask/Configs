@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cmd=""
+case $SHELL in
+  /bin/bash) cmd="tac $HISTFILE" ;;
+  /bin/fish) cmd="fish -c 'history'" ;;
+  *) exit ;;
+esac
+
+eval $(eval $cmd | dmenu -l 10 -p "Execute a command from history")

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo $2 | nohup entr -p -s "killall $1 && $1 & && dunstify '$1 restarted'" &

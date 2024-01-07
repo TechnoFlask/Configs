@@ -1,0 +1,29 @@
+#!/bin/sh
+
+send_notification() {
+  volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep "%" | cut -d "/" -f 2 | sed "s/ //g" | sed "s/%//")
+  [ $volume -le 100 ] && dunstify -a "changevolume" -r 9991 -h int:value:"$volume" "Volume: ${volume}%" -t 2000 || exit
+}
+
+case $1 in
+  up) 
+    pactl set-sink-volume @DEFAULT_SINK@ "+$2%"
+    send_notification
+    ;;
+  down)
+    pactl set-sink-volume @DEFAULT_SINK@ "-$2%"
+    send_notification
+    ;;
+  toggle)
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+    case $(pactl get-sink-mute @DEFAULT_SINK@ | cut -d " " -f 2) in
+      no)
+      send_notification
+        ;;
+      yes)
+      dunstify -a "changevolume" -r 9991 -h int:value:"0" "Volume: 0%" -t 2000
+        ;;
+    esac
+    ;;
+  *) exit ;;
+esac
