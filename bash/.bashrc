@@ -61,17 +61,4 @@ function parse_git_dirty {
 		echo ""
 	fi
 }
-PS1='\[\e[38;5;196m\][\[\e[38;5;73m\]\u\[\e[38;5;220;1m\]@\[\e[0;38;5;148m\]\h \[\e[38;5;135;3m\]\w \[\e[0;38;5;49m\]`parse_git_branch`\[\e[38;5;196m\]]\[\e[0m\]\$ '
-
-# Conda
-__conda_setup="$('/home/technoflask/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/technoflask/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/technoflask/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/technoflask/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+PS1='\[\e[38;5;196m\][\[\e[38;5;73m\]\u\[\e[38;5;220;1m\]@\[\e[0;38;5;148m\]\h \[\e[38;5;135;3m\]\w\[\e[0;38;5;49m\]`parse_git_branch`\[\e[38;5;196m\]]\[\e[0m\]\$ '

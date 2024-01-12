@@ -11,9 +11,9 @@ static const unsigned int snap = 32;    /* snap pixel */
 static const unsigned int gappih = 15; /* horiz inner gap between windows */
 static const unsigned int gappiv = 15; /* vert inner gap between windows */
 static const unsigned int gappoh =
-    20; /* horiz outer gap between windows and screen edge */
+    25; /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov =
-    20; /* vert outer gap between windows and screen edge */
+    25; /* vert outer gap between windows and screen edge */
 static int smartgaps =
     0; /* 1 means no outer gap when there is only one window */
 
@@ -116,7 +116,7 @@ static const Layout layouts[] = {
 static const Key keys[] = {
     /* modifier                     key        function        argument */
     // {MODKEY, XK_Return, spawn, {.v = dmenucmd}},
-    {MODKEY, XK_Return, spawn, SHCMD("dmenu_run -p 'Apps'")},
+    {MODKEY, XK_Return, spawn, SHCMD("dmenu_run -l 10 -p 'Apps'")},
     // {MODKEY | ShiftMask, XK_Return, spawn, {.v = termcmd}},
     {MODKEY | ShiftMask, XK_Return, spawn, SHCMD("st")},
     {MODKEY, XK_b, togglebar, {0}},

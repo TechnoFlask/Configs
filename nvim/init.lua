@@ -641,7 +641,7 @@ vim.o.background = "dark"
 local c = require("vscode.colors").get_colors()
 require('vscode').setup({
   transparent = true,
-  italic_comments = true,
+  italic_comments = false,
   color_overrides = {
     vscLineNumber = '#FFFFFF',
   },
@@ -653,7 +653,8 @@ require('vscode').setup({
 
 require("onedark").setup({
   style = "darker",
-  transparent = "true"
+  transparent = "true",
+  italic_comments = false
 })
 require("onedark").load()
 
