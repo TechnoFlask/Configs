@@ -9,10 +9,12 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias df="df -h"
 alias du="du -sh"
+alias clear="command clear; echo; seq $(tput cols) | shuf | spark | lolcat; echo; echo"
 alias free="free -h"
 alias lsblk="lsblk -e 7"
 alias losetup="losetup -a | sort"
 alias ip="ip -c"
+
 
 alias xargs="xargs -t"
 
