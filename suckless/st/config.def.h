@@ -1,5 +1,6 @@
 static char *font =
-    "Fira Code:pixelsize=20:weight=demibold:antialias=true:autohint=true";
+    "Fira Code "
+    ":pixelsize=20:weight=demibold:antialias=true:autohint=true";
 // static char *font =
 //     "Hasklug Nerd Font "
 //     "Mono:pixelsize=20:weight=demibold:antialias=true:autohint=true";
