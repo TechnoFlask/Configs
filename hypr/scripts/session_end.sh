@@ -5,6 +5,6 @@ choice=$(printf "Shutdown\nReboot\nLogout" | rofi -dmenu -i)
 case "$choice" in
   "Shutdown") shutdown now ;;
   "Reboot") reboot ;;
-  "Logout") hyprctl dispatch exit ;;
+  "Logout") kill -9 -1 ;;
   *) exit ;;
 esac

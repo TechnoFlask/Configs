@@ -1,4 +1,3 @@
 function fish_greeting
-    neofetch
-    # pfetch
+    echo;seq (tput cols) | shuf | spark | lolcat; echo; echo;
 end
