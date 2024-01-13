@@ -12,6 +12,7 @@ alias du="du -sh"
 alias free="free -h"
 alias lsblk="lsblk -e 7"
 alias losetup="losetup -a | sort"
+alias ip="ip -c"
 
 alias xargs="xargs -t"
 
