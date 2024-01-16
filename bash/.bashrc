@@ -7,10 +7,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-fish
-
 # Alias
 [ -f "$HOME/.config/.aliasrc" ] && source "$HOME/.config/.aliasrc"
+
+fish
+clear
 
 # Vim mode
 set -o vi
@@ -62,3 +63,5 @@ function parse_git_dirty {
 	fi
 }
 PS1='\[\e[38;5;196m\][\[\e[38;5;73m\]\u\[\e[38;5;220;1m\]@\[\e[0;38;5;148m\]\h \[\e[38;5;135;3m\]\w\[\e[0;38;5;49m\]`parse_git_branch`\[\e[38;5;196m\]]\[\e[0m\]\$ '
+
+export QSYS_ROOTDIR="/home/technoflask/intelFPGA_lite/23.1std/quartus/sopc_builder/bin"

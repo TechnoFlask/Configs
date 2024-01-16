@@ -10,3 +10,5 @@
 [ "$(tty)" = "/dev/tty1" ] && exec $HOME/.local/scripts/start-session
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+
+export QSYS_ROOTDIR="/home/technoflask/intelFPGA_lite/23.1std/quartus/sopc_builder/bin"

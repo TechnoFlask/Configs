@@ -16,13 +16,13 @@ declare -a options=(
   "st $HOME/Configs/suckless/st/config.def.h"
   "kitty $HOME/Configs/kitty/kitty.conf"
   "neovim $HOME/Configs/nvim/init.lua"
-  "bashrc $HOME/Configs/.bashrc"
+  "bashrc $HOME/Configs/bash/.bashrc"
   "aliases $HOME/Configs/.aliasrc"
   "profile $HOME/Configs/.profile"
   "quit"
 )
 
-choice=$(printf "%s\n" "${options[@]}" | dmenu -l 20 -p "EditConfigs")
+choice=$(printf "%s\n" "${options[@]}" | dmenu -l 20 -p "Edit Config File")
 
 [ "$choice" = "quit" ] && echo "Program terminated." && exit 0
 
