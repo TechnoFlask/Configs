@@ -15,8 +15,6 @@ alias lsblk="lsblk -e 7"
 alias losetup="losetup -a | sort"
 alias ip="ip -c"
 alias ln="ln -v"
-
-
 alias xargs="xargs -t"
 
 alias nv="nvim"
@@ -32,5 +30,6 @@ alias quartus="$HOME/intelFPGA_lite/23.1std/quartus/bin/quartus"
 
 alias update="sudo pacman -Syu && paru -Syu"
 alias pacinstall="sudo pacman -S"
+alias pacsearch="sudo pacman -Fy"
 alias aurinstall="paru -S"
 alias cleanup="sudo pacman -Rns (pacman -Qtdq)"
