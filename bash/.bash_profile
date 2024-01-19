@@ -5,10 +5,8 @@
 # |_.__/ \__,_|___/_| |_| | .__/|_|  \___/|_| |_|_|\___|
 #                         |_|                           
 
-[ -f "$HOME/.config/.profile" ] && source "$HOME/.config/.profile"
+[ -f "$HOME/.config/.profile" ] && source $HOME/.config/.profile
 
 [ "$(tty)" = "/dev/tty1" ] && exec $HOME/.local/scripts/start-session
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-
-export QSYS_ROOTDIR="/home/technoflask/intelFPGA_lite/23.1std/quartus/sopc_builder/bin"
+[ -f ~/.bashrc ] && source $HOME/.bashrc

@@ -17,6 +17,8 @@ export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 export RUSTUP_HOME=$XDG_DATA_HOME/rustup
 export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
 export JAVA_OPTIONS=-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java
+export BUN_INSTALL="$HOME/.bun"
+export QSYS_ROOTDIR="/home/technoflask/intelFPGA_lite/23.1std/quartus/sopc_builder/bin"
 
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
@@ -26,3 +28,4 @@ export MANPAGER='less -R --use-color -Dd+r -Du+b'
 export MANROFFOPT='-P -c'
 
 export PATH=$PATH:$HOME/.local/scripts/
+export PATH=$BUN_INSTALL/bin:$PATH
