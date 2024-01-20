@@ -65,7 +65,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
     /* function format          argument */
-    {run_command, "   %s | ", "uname -a | cut -d ' ' -f 3"},
+    {run_command, "   %s | ", "uname -r"},
     {battery_perc, " %s%% | ", "BAT1"},
     {ram_perc, " %s%% | ", NULL},
     {cpu_perc, " %s%% | ", NULL},
