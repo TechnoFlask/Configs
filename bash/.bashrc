@@ -10,7 +10,6 @@
 # Alias
 [ -f "$HOME/.config/.aliasrc" ] && source "$HOME/.config/.aliasrc"
 
-fish
 clear
 
 # Vim mode

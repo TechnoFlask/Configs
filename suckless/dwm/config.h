@@ -118,7 +118,7 @@ static const Key keys[] = {
     // {MODKEY, XK_Return, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, SHCMD("dmenu_run -l 10 -p 'Apps'")},
     // {MODKEY | ShiftMask, XK_Return, spawn, {.v = termcmd}},
-    {MODKEY | ShiftMask, XK_Return, spawn, SHCMD("st")},
+    {MODKEY | ShiftMask, XK_Return, spawn, SHCMD("st -e /usr/bin/fish")},
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
