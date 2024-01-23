@@ -27,7 +27,7 @@ ctrl+ alt + v
 ctrl + alt + p
     kitty btop
 # Screenshot
-@Print
+@Print 
     flameshot gui
 
 
