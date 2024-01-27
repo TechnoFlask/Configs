@@ -2,16 +2,16 @@
 
 send_notification() {
   volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep "%" | cut -d "/" -f 2 | sed "s/ //g" | sed "s/%//")
-  [ $volume -le 100 ] && dunstify -a "changevolume" -r 9991 -h int:value:"$volume" "Volume: ${volume}%" -t 2000 || exit
+  [ $volume -le 100 ] && dunstify -a "changevolume" -r 9991 -h int:value:"${volume}" "Volume: ${volume}%" -t 2000 || exit
 }
 
 case $1 in
   up) 
-    pactl set-sink-volume @DEFAULT_SINK@ "+$2%"
+    pactl set-sink-volume @DEFAULT_SINK@ "+${2}%"
     send_notification
     ;;
   down)
-    pactl set-sink-volume @DEFAULT_SINK@ "-$2%"
+    pactl set-sink-volume @DEFAULT_SINK@ "-${2}%"
     send_notification
     ;;
   toggle)

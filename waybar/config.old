@@ -5,34 +5,11 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces"],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock", "battery"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight"],
+
     // Modules configuration
-    "wlr/workspaces": {
-                "format": "{name}: {icon}",
-                "format-icons": {
-                     "1": "",
-                     "2": "",
-                     "3": "",
-                     "4": "",
-                     "5": "",
-                     "active": "",
-                     "default": ""
-                },
-                "sort-by-number": true
-           },
-    //"clock": {
-        // "timezone": "America/New_York",
-        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        //"format-alt": "{:%Y-%m-%d}"
-    //},
-    //"clock": {
-    //    "interval": 60,
-    //    "tooltip": true,
-    //    "format": "{:%Y-%m-%d %I:%M %p}",
-    //    "tooltip-format": "{:%Y-%m-%d}",
-    //},
     "clock": {
         "format": "{:%Y-%m-%d %I:%M %p}  ",
         "format-alt": "{:%A, %B %d, %Y (%R)}  ",
@@ -59,6 +36,7 @@
                     "on-scroll-down": "shift_down"
                     }
     },
+    
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
@@ -81,7 +59,7 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -93,11 +71,7 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
@@ -106,7 +80,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -122,19 +96,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "on-click": "kitty pulsemixer"
     }
 }
 

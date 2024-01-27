@@ -1,0 +1,103 @@
+{
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{icon}"
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "   $1"
+    },
+    "separate-outputs": true
+  },
+  "clock": {
+    "format": "  {:%b %d, %Y %R}",
+    "tooltip-format": "<span size='11pt' font='Fira Code'>{calendar}</span>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "battery": {
+    "bat": "BAT1",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}   {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "max-length": 25
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-ethernet": "󰊗  {ipaddr}/{cidr}",
+    "format-disconnected": "Disconnected",
+    "tooltip-format": "󰊗  {ifname} via {gwaddr}",
+    "tooltip-format-wifi": "  {ifname}: {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "  {ifname}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "disk": {
+    "interval": 30,
+    "format": "  {percentage_used}%",
+    "tooltip-format": "{used}/{total} Used",
+    "path": "/",
+    "on-click": "kitty -e ncdu"
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "  {usage}%",
+    "max-length": 10,
+    "on-click": "kitty -e btop"
+  },
+  "temperature": {
+    "format": " {temperatureC}°C",
+    "tooltip-format": "CPU temp: {temperatureC}°C",
+    "on-click": "kitty -e btop"
+  },
+  "memory": {
+    "interval": 30,
+    "format": "  {percentage}%",
+    "tooltip-format": "{used}G/{total}G Used",
+    "max-length": 10,
+    "on-click": "kitty -e btop"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 1,
+    "on-click": "kitty -e pulsemixer",
+    "ignored-sinks": [
+      "Easy Effects Sink"
+    ]
+  }
+}
