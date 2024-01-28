@@ -8,7 +8,7 @@
   border-radius: 20px;
   /* padding-right: 5px; */
   background-color: #224987;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 #workspaces button {
@@ -53,10 +53,16 @@ window#waybar.empty #window {
   font-style: italic;
   font-size: 18px;
   text-shadow: 0 0 5px #fff;
+
+  transition: background-color 0.2s linear;
 }
 
 #battery.charging {
   background-color: #045c1e;
+}
+
+#battery.discharging {
+  background-color: #224987;
 }
 
 #network.disconnected {
@@ -64,5 +70,5 @@ window#waybar.empty #window {
 }
 
 #pulseaudio {
-  margin-right: 5px;
+  margin-right: 10px;
 }

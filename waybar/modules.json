@@ -6,13 +6,14 @@
   },
   "hyprland/window": {
     "format": "{title}",
+    "max-length": 50,
     "rewrite": {
       "(.*) — Mozilla Firefox": "   $1"
     },
     "separate-outputs": true
   },
   "clock": {
-    "format": "  {:%b %d, %Y %R}",
+    "format": "  {:%b %d, %Y %I:%M %p}",
     "tooltip-format": "<span size='11pt' font='Fira Code'>{calendar}</span>",
     "calendar": {
       "mode": "year",
@@ -58,7 +59,7 @@
     "format": "  {percentage_used}%",
     "tooltip-format": "{used}/{total} Used",
     "path": "/",
-    "on-click": "kitty -e ncdu"
+    "on-click": "kitty -e ncdu /"
   },
   "cpu": {
     "interval": 10,

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-printf "1. DWM, 2. Hyprland, 3. KDE\n"
+printf "1. DWM, 2. KDE, 3. HyprLand\n"
 read choice
 
 case $choice in
   1) startx <(cat $HOME/.config/X11/xinitrc-base $HOME/.config/X11/xinitrc-dwm) | tee $HOME/Logs/startx.log ;;
-  2) exec Hyprland ;;
-  3) startx <(cat $HOME/.config/X11/xinitrc-base $HOME/.config/X11/xinitrc-kde) | tee $HOME/Logs/startx.log ;;
+  2) startx <(cat $HOME/.config/X11/xinitrc-base $HOME/.config/X11/xinitrc-kde) | tee $HOME/Logs/startx.log ;;
+  3) exec Hyprland ;;
   *) exit ;;
 esac
