@@ -6,7 +6,7 @@
   },
   "hyprland/window": {
     "format": "{title}",
-    "max-length": 50,
+    "max-length": 40,
     "rewrite": {
       "(.*) — Mozilla Firefox": "   $1"
     },
