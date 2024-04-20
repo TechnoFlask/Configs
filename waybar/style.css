@@ -1,21 +1,26 @@
+* {
+  font-family: "Fira Sans"
+ }
+
 #waybar {
   background-color: transparent;
+  color: white;
 }
-    /* "format": "{:%A, %B %d, %Y (%R)}  ", */
 
 #workspaces {
   border: 3px solid #fff;
   border-radius: 20px;
   /* padding-right: 5px; */
-  background-color: #224987;
+  background-color: #873e23;
   margin-left: 10px;
 }
 
 #workspaces button {
   border-radius: 50%;
   transition: text-shadow 0.2s linear;
-  font-style: italic;
+  font-style: normal;
   font-size: 20px;
+  color: white;
 }
 
 #workspaces button:hover{
@@ -33,8 +38,8 @@
   padding-left: 15px;
   border: 3px solid #fff;
   border-radius: 20px;
-  background-color: #224987;
-  font-style: italic;
+  background-color: #873e23;
+  font-style: normal;
   font-size: 20px;
   text-shadow: 0 0 5px #fff;
 }
@@ -45,12 +50,12 @@ window#waybar.empty #window {
 }
 
 #clock, #battery, #network, #disk, #cpu, #temperature ,#memory, #pulseaudio {
-  background-color: #224987;
+  background-color: #873e23;
   border: 3px solid #fff;
   border-radius: 20px;
   padding-right: 10px;
   padding-left: 10px;
-  font-style: italic;
+  font-style: normal;
   font-size: 18px;
   text-shadow: 0 0 5px #fff;
 
@@ -62,7 +67,7 @@ window#waybar.empty #window {
 }
 
 #battery.discharging {
-  background-color: #224987;
+  background-color: #873e23;
 }
 
 #network.disconnected {

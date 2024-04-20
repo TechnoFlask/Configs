@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo wpa_supplicant -i wlp4s0 -c ~/wpa_config.conf -B
-sudo dhcpcd wlp4s0
+sudo wpa_supplicant -i wlan0 -c ~/wpa-config.conf -B
+sudo dhcpcd wlan0

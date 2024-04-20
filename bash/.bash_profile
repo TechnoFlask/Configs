@@ -10,3 +10,5 @@
 [ "$(tty)" = "/dev/tty1" ] && exec $HOME/.local/scripts/start-session
 
 [ -f ~/.bashrc ] && source $HOME/.bashrc
+
+export QSYS_ROOTDIR="/home/technoflask/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/23.1/quartus/sopc_builder/bin"

@@ -684,7 +684,7 @@ require("toggleterm").setup({
 -- neovide config
 if vim.g.neovide then
   -- vim.o.guifont = "Hasklug Nerd Font Med:h16" -- Hyprland
-  vim.o.guifont = "Hasklug Nerd Font Med:h11" -- DWM
+  vim.o.guifont = "Hasklug Nerd Font Med:h16.5" -- DWM
   vim.g.neovide_transparency = 0.8
   vim.g.neovide_refresh_rate = 144
   vim.g.neovide_scale_factor = 1.0

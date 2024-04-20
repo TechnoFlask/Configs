@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 send_notification() {
   volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep "%" | cut -d "/" -f 2 | sed "s/ //g" | sed "s/%//")

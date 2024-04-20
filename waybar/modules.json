@@ -13,8 +13,8 @@
     "separate-outputs": true
   },
   "clock": {
-    "format": "  {:%b %d, %Y %I:%M %p}",
-    "tooltip-format": "<span size='11pt' font='Fira Code'>{calendar}</span>",
+    "format": "   {:%b %d, %Y %I:%M %p}",
+    "tooltip-format": "<span size='10pt' font='Fira Code'>{calendar}</span>",
     "calendar": {
       "mode": "year",
       "mode-mon-col": 3,
@@ -33,54 +33,55 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}   {capacity}%",
+    "format": "{icon}  {capacity}%",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
     ],
     "max-length": 25
   },
   "network": {
+    "interface": "wlan0",
     "format": "{ifname}",
-    "format-wifi": "  {essid} ({signalStrength}%)",
-    "format-ethernet": "󰊗  {ipaddr}/{cidr}",
+    "format-wifi": "   {essid} ({signalStrength}%)",
+    "format-ethernet": "󰊗   {ipaddr}/{cidr}",
     "format-disconnected": "Disconnected",
-    "tooltip-format": "󰊗  {ifname} via {gwaddr}",
-    "tooltip-format-wifi": "  {ifname}: {essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "  {ifname}",
+    "tooltip-format": "󰊗   {ifname} via {gwaddr}",
+    "tooltip-format-wifi": "   {ifname}: {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "   {ifname}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
   },
   "disk": {
     "interval": 30,
-    "format": "  {percentage_used}%",
+    "format": "   {percentage_used}%",
     "tooltip-format": "{used}/{total} Used",
     "path": "/",
     "on-click": "kitty -e ncdu /"
   },
   "cpu": {
     "interval": 10,
-    "format": "  {usage}%",
+    "format": "   {usage}%",
     "max-length": 10,
     "on-click": "kitty -e btop"
   },
   "temperature": {
-    "format": " {temperatureC}°C",
+    "format": "  {temperatureC}°C",
     "tooltip-format": "CPU temp: {temperatureC}°C",
     "on-click": "kitty -e btop"
   },
   "memory": {
     "interval": 30,
-    "format": "  {percentage}%",
+    "format": "   {percentage}%",
     "tooltip-format": "{used}G/{total}G Used",
     "max-length": 10,
     "on-click": "kitty -e btop"
   },
   "pulseaudio": {
-    "format": "{icon}{volume}%",
+    "format": "{icon}  {volume}%",
     "format-bluetooth": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
