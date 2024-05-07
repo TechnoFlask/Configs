@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 5x30
+    offset = 20x30
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -322,8 +322,9 @@
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#67468c"
+    background = "#873e23"
     foreground = "#ffffff"
+    frame_color = "#cb8a74"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon

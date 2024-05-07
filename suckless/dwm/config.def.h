@@ -26,9 +26,9 @@ static const char *fonts[] = {"Fira Code:weight=medium:size=12"};
 static const char normal_bg[] = "#000000";
 static const char normal_border[] = "#444444";
 static const char normal_fg[] = "#bbbbbb";
-static const char selected_fg[] = "#c39cf0";
+static const char selected_fg[] = "#cb8a74";
 static const char selected_bg[] = "#000000";
-static const char selected_border[] = "#67468c";
+static const char selected_border[] = "#873e23";
 
 static const unsigned int baralpha = 0x21;
 static const unsigned int borderalpha = OPAQUE;

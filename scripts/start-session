@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "1. DWM, 2. KDE, 3. HyprLand\n"
+printf "1. DWM, 2. KDE, 3. HyprLand: "
 read choice
 
 case $choice in
